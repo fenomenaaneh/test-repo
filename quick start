@@ -1,0 +1,11 @@
+from src.angular_momentum import AngularMomentum
+from src.quantum_mechanics import CoupledState
+
+# Create angular momentum objects
+am1 = AngularMomentum(l=1, m=-1)
+am2 = AngularMomentum(l=1, m=-1)
+
+# Calculate coupling
+coupled = CoupledState(am1, am2, total_l=2, total_m=-1)
+probability = coupled.measurement_probability(-1, -1)
+print(f"Probability: {probability}")
